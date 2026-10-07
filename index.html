@@ -294,14 +294,29 @@ MathJax = {
     width:22px;height:22px;border-radius:7px;flex-shrink:0;
   }
 
+  /* ИСПРАВЛЕНО: титульный слайд корректно скроллится */
   .title-slide{
-    text-align:center;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;gap:14px;padding:18px 60px;
+    flex:1;
+    display:flex;flex-direction:column;
+    align-items:center;
+    gap:14px;
+    padding:10px 60px 20px;
     overflow-y:auto;
+    overflow-x:hidden;
+    min-height:0;
+  }
+  .title-slide-inner{
+    margin:auto 0;
+    display:flex;flex-direction:column;
+    align-items:center;
+    gap:14px;
+    width:100%;
+    max-width:900px;
   }
   .title-slide h1{
     font-size:34px;color:var(--orange-dark);font-weight:800;
     margin:0;letter-spacing:-.5px;
+    text-align:center;
   }
   .title-slide .subtitle-big{font-size:15px;color:var(--muted);margin:0;}
   .title-slide .info-grid{
@@ -656,46 +671,48 @@ MathJax = {
   <!-- СЛАЙД 0. ТИТУЛ -->
   <section class="slide active">
     <div class="title-slide">
-      <span class="slide-tag">Проверочная работа</span>
-      <h1>Прямоугольник, ромб, квадрат</h1>
-      <p class="subtitle-big">Геометрия · 8 класс</p>
+      <div class="title-slide-inner">
+        <span class="slide-tag">Проверочная работа</span>
+        <h1>Прямоугольник, ромб, квадрат</h1>
+        <p class="subtitle-big">Геометрия · 8 класс</p>
 
-      <div class="info-grid">
-        <div class="info-card">
-          <span class="num">3</span>
-          <span class="label">обязательных задания</span>
+        <div class="info-grid">
+          <div class="info-card">
+            <span class="num">3</span>
+            <span class="label">обязательных задания</span>
+          </div>
+          <div class="info-card">
+            <span class="num">★</span>
+            <span class="label">одно на выбор</span>
+          </div>
+          <div class="info-card">
+            <span class="num">⏱</span>
+            <span class="label">следи за таймером</span>
+          </div>
         </div>
-        <div class="info-card">
-          <span class="num">★</span>
-          <span class="label">одно на выбор</span>
-        </div>
-        <div class="info-card">
-          <span class="num">⏱</span>
-          <span class="label">следи за таймером</span>
-        </div>
-      </div>
 
-      <div class="rules-box">
-        <b>📋 Как работать:</b>
-        <ul>
-          <li><b>Решение — в тетради.</b> Сначала пробуй сам, без подсказок.</li>
-          <li>Если не помнишь, как оформлять — нажми кнопку <b>«📐 Показать образец»</b> внизу.</li>
-          <li><b>Задания 1–3</b> — обязательные. <b>Задание ★</b> — один уровень на выбор.</li>
-          <li>Когда закончишь — нажми <b>«✅ Завершить работу»</b> внизу справа.</li>
-        </ul>
+        <div class="rules-box">
+          <b>📋 Как работать:</b>
+          <ul>
+            <li><b>Решение — в тетради.</b> Сначала пробуй сам, без подсказок.</li>
+            <li>Если не помнишь, как оформлять — нажми кнопку <b>«📐 Показать образец»</b> внизу.</li>
+            <li><b>Задания 1–3</b> — обязательные. <b>Задание ★</b> — один уровень на выбор.</li>
+            <li>Когда закончишь — нажми <b>«✅ Завершить работу»</b> внизу справа.</li>
+          </ul>
 
-        <div class="umaclass-step">
-          <b>📤 Куда отправить:</b> платформа <b>Umaclass</b> → блок <b>«Самостоятельная работа»</b> → загрузить фото → <b>Отправить</b>.
+          <div class="umaclass-step">
+            <b>📤 Куда отправить:</b> платформа <b>Umaclass</b> → блок <b>«Самостоятельная работа»</b> → загрузить фото → <b>Отправить</b>.
+          </div>
         </div>
-      </div>
 
-      <div class="honesty-box">
-        <span class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
-        <b>🕌 Честность — часть имана.</b> Списывать нельзя: ни у соседа, ни из интернета, ни из решебника.
-        Пророк ﷺ сказал: <b>«Кто обманывает нас, тот не из нас»</b> (Муслим).
-        <div class="hadith">
-          Решай сам — даже если ошибаешься. Честно полученная оценка лучше, чем высокая, но заработанная обманом.
-          Аллах видит твои старания, и они не пропадут.
+        <div class="honesty-box">
+          <span class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</span>
+          <b>🕌 Честность — часть имана.</b> Списывать нельзя: ни у соседа, ни из интернета, ни из решебника.
+          Пророк ﷺ сказал: <b>«Кто обманывает нас, тот не из нас»</b> (Муслим).
+          <div class="hadith">
+            Решай сам — даже если ошибаешься. Честно полученная оценка лучше, чем высокая, но заработанная обманом.
+            Аллах видит твои старания, и они не пропадут.
+          </div>
         </div>
       </div>
     </div>
